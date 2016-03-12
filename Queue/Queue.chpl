@@ -1,6 +1,6 @@
 module Queue
 {
-    private class deque_node
+    class deque_node
     {
         type elType;
         
@@ -15,7 +15,6 @@ module Queue
         var first : deque_node(elType);
         var last : deque_node(elType);
         var length : int;
-        var destroyed : bool = true;
 
         iter these()
         {
