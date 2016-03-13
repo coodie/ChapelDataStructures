@@ -130,14 +130,14 @@ module Queue
 
         proc front() : elType
         {
-            if first == nil
+            if first == nil then
                 halt ("trying to access empty queue");
             return first.data;
         }
 
         proc back() : elType
         {
-            if last == nil
+            if last == nil then
                 halt ("trying to access empty queue");
             return last.data;
         }
