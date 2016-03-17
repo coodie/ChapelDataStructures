@@ -119,8 +119,6 @@ module Queue
                 var old_last = last;
                 var new_last = last.prev;
                 new_last.next = nil;
-                //if last.prev == old_first then
-                    //last = new_first;
                 last = new_last;
                 delete old_last;
             }
@@ -181,10 +179,7 @@ module Queue
             erase();
         }
 
-        //these methods shouldn't be used by client of class
-        //but lazy chapel devs didn't implement
-        //private class members yet
-
+        //these methods should be private
         proc remove_node(node : deque_node(elType))
         {
             if node == first then
@@ -205,9 +200,6 @@ module Queue
 
         proc print()
         {
-            //writeln("first: ", first);
-            //writeln("last: ", last);
-            //writeln("last == first: ", last == first);
             var node = first;
             while node != nil
             {
